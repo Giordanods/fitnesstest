@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>André</title>
+    <script>
+      function mudarCorFundo() {
+        var cor = obterCorAleatoria();
+        document.body.style.backgroundColor = cor;
+        setTimeout(mudarCorFundo, 1000);
+      }
+
+      function mudarCorFundo2() {
+        var cor = obterCorAleatoria();
+        document.body.style.backgroundColor = cor;
+        setTimeout(mudarCorFundo, 2000);
+      }
+
+      function mudarCorFundo3() {
+        var cor = obterCorAleatoria();
+        document.body.style.backgroundColor = cor;
+        setTimeout(mudarCorFundo, 3000);
+      }
+
+      function mudarCorFundo4() {
+        var cor = obterCorAleatoria();
+        document.body.style.backgroundColor = cor;
+        setTimeout(mudarCorFundo, 500);
+      }
+      function parar() {
+        clearInterval();
+      }
+
+      function obterCorAleatoria() {
+        var cores = ["red", "blue", "green", "white"];
+        var indiceAleatorio = Math.floor(Math.random() * cores.length);
+        return cores[indiceAleatorio];
+      }
+    </script>
+  </head>
+  <body>
+    <button value="Go!" onclick="mudarCorFundo4()">Iniciar 0,5 s</button>
+    <button value="Go!" onclick="mudarCorFundo()">Iniciar 1 s</button>
+    <button value="Go!" onclick="mudarCorFundo2()">Iniciar 2 s</button>
+    <button value="Go!" onclick="mudarCorFundo3()">Iniciar 3 s</button>
+
+    <button value="Go!" onclick="window.location.reload()">Parar</button>
+  </body>
+</html>
